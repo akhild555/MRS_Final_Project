@@ -1,4 +1,4 @@
-# Robot-Swarm-Final-Project
+# Multi-Robot Goal-Seeking in a Dynamic Map Using Potential Fields
 
   Multi-robot systems are an increasingly popular area of research. They have great potential in a wide variety of applications and they will be essential to make significant strides in robotics. One of the key areas of research within this field is the study of motion and
 path planning techniques for a system of robots. While path planning for a single robot
