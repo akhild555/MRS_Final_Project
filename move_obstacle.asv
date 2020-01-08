@@ -1,0 +1,32 @@
+function [obst,obstacle_struct] = move_obstacle(obst,obstacles,obstacle_struct,r_ob)
+    
+    F_att = [0 0];
+    F_rep_obs = 
+    for k = 1:obstacles
+        for n = 1:obstacles
+            if n == i
+                continue
+            else
+                F_rep_obs(n,:) = RepulsiveF(obst(k,:),obst(n,:),obstacle_struct.o(k).XData,obstacle_struct.o(k).YData,obstacle_struct.o(n).XData,obstacle_struct.o(n).YData,rho_rob,eta_rob);                                                                                                  
+            end                
+        end    
+        
+        F_totx = (F_att(1))+F_rep_sum(1)+F_rep_rob_sum(1)+F_rep_goal(1);
+        F_toty = (F_att(2))+F_rep_sum(2)+F_rep_rob_sum(2)+F_rep_goal(2);
+
+        if mod(k,2) == 0            
+            obstacle_struct.o(k).XData = obstacle_struct.o(k).XData+.25;  
+            obstacle_struct.o(k).YData = obstacle_struct.o(k).YData+.25;
+        else
+            obstacle_struct.o(k).XData = obstacle_struct.o(k).XData-.25;  
+            obstacle_struct.o(k).YData = obstacle_struct.o(k).YData-.25;
+
+        end
+        obst(k,1) = mean(obstacle_struct.o(k).XData-r_ob(k)*cos(linspace(0,2*pi,100)));
+        obst(k,2) = mean(obstacle_struct.o(k).YData-r_ob(k)*sin(linspace(0,2*pi,100)));            
+
+    end
+    
+    
+
+end
