@@ -17,3 +17,7 @@ To run code:
    is designed around formations.
 3) You can also play around with the parameters or leave them be.
 3) Run code.
+
+Below is a gif of a formation of 6 robots surrounding a goal while avoiding dynamic objects.
+
+![](MRS.gif)
