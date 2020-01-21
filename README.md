@@ -20,4 +20,4 @@ To run code:
 
 Below is a gif of a formation of 6 robots surrounding a goal while avoiding dynamic objects.
 
-![](MRS.gif)
+![](screenshots/MRS.gif)
